@@ -195,7 +195,9 @@ export default function Home() {
                                       {doc.pageContent}
                                     </ReactMarkdown>
                                     <p className="mt-2">
-                                      <b>Source: </b> {doc.metadata.source.includes('vision') ? 'https://www.vision2030.gov.sa/media/rc0b5oy1/saudi_vision203.pdf' : 'https://www.vision2030.gov.sa/media/gi3l3js2/qol-en.pdf'}
+                                      <b>Source: </b> {doc.metadata.source.includes('vision') ? 
+                                      'https://www.vision2030.gov.sa/media/rc0b5oy1/saudi_vision203.pdf' : doc.metadata.source.includes('life') ? 'https://www.vision2030.gov.sa/media/gi3l3js2/qol-en.pdf'
+                                      : doc.metadata.source.includes('pif') ? 'https://www.vision2030.gov.sa/media/mdppqvmv/v2030_pif_2025_en.pdf' : doc.metadata.source.includes('delivery') ? 'https://www.vision2030.gov.sa/media/nhyo0lix/ntp_eng_opt.pdf' : 'none'}
                                     </p>
                                   </AccordionContent>
                                 </AccordionItem>
